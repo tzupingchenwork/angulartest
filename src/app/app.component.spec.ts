@@ -28,4 +28,15 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to AngularTest!');
   });
+
+  function sayHello() {
+    return 'Hello!';
+  }
+  describe('Say hello', () => {
+    it('show hello', () => {
+      expect(sayHello()).toEqual('Hello!');
+      expect(sayHello()).toEqual('Hello!');
+    });
+  });
+
 });
